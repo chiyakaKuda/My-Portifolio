@@ -1,393 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="me.ico" type="image/x-icon">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <title>Chiyaka Kuda</title>
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            font-family: 'Roboto', sans-serif;
-            color: #111;
-            overflow: hidden;
-            background: linear-gradient(-45deg, #3BBA9C, #2E3047, #43455C, #3C3F58);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
-    color: #707793;
-
- 
-        }
-    @keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-@keyframes moveParticle {
-  0% {
-    transform: translate(0, 0);
-  }
-  100% {
-    transform: translate(var(--move-x), var(--move-y));
-  }
-}
-
-.particle {
-  position: absolute;
-  background-color: rgba(59, 186, 156, 0.5); /* #3BBA9C with transparency */
-  border-radius: 50%;
-  animation: moveParticle 10s infinite linear;
-}
-
-.particle:nth-child(1) { --size: 3px; --move-x: 20vw; --move-y: -20vh; left: 5%; top: 95%; --duration: 13s; }
-.particle:nth-child(2) { --size: 4px; --move-x: -15vw; --move-y: -25vh; left: 10%; top: 90%; --duration: 17s; }
-.particle:nth-child(3) { --size: 5px; --move-x: 25vw; --move-y: -15vh; left: 15%; top: 85%; --duration: 11s; }
-.particle:nth-child(4) { --size: 3px; --move-x: -20vw; --move-y: -30vh; left: 20%; top: 80%; --duration: 15s; }
-.particle:nth-child(5) { --size: 4px; --move-x: 15vw; --move-y: -20vh; left: 25%; top: 75%; --duration: 14s; }
-.particle:nth-child(6) { --size: 5px; --move-x: -25vw; --move-y: -25vh; left: 30%; top: 70%; --duration: 16s; }
-.particle:nth-child(7) { --size: 3px; --move-x: 20vw; --move-y: -15vh; left: 35%; top: 65%; --duration: 12s; }
-.particle:nth-child(8) { --size: 4px; --move-x: -15vw; --move-y: -30vh; left: 40%; top: 60%; --duration: 18s; }
-.particle:nth-child(9) { --size: 5px; --move-x: 25vw; --move-y: -20vh; left: 45%; top: 55%; --duration: 13s; }
-.particle:nth-child(10) { --size: 3px; --move-x: -20vw; --move-y: -25vh; left: 50%; top: 50%; --duration: 15s; }
-.particle:nth-child(11) { --size: 4px; --move-x: 15vw; --move-y: -15vh; left: 55%; top: 45%; --duration: 14s; }
-.particle:nth-child(12) { --size: 5px; --move-x: -25vw; --move-y: -30vh; left: 60%; top: 40%; --duration: 16s; }
-.particle:nth-child(13) { --size: 3px; --move-x: 20vw; --move-y: -20vh; left: 65%; top: 35%; --duration: 12s; }
-.particle:nth-child(14) { --size: 4px; --move-x: -15vw; --move-y: -25vh; left: 70%; top: 30%; --duration: 17s; }
-.particle:nth-child(15) { --size: 5px; --move-x: 25vw; --move-y: -15vh; left: 75%; top: 25%; --duration: 13s; }
-.particle:nth-child(16) { --size: 3px; --move-x: -20vw; --move-y: -30vh; left: 80%; top: 20%; --duration: 15s; }
-.particle:nth-child(17) { --size: 4px; --move-x: 15vw; --move-y: -20vh; left: 85%; top: 15%; --duration: 14s; }
-.particle:nth-child(18) { --size: 5px; --move-x: -25vw; --move-y: -25vh; left: 90%; top: 10%; --duration: 16s; }
-.particle:nth-child(19) { --size: 3px; --move-x: 20vw; --move-y: -15vh; left: 95%; top: 5%; --duration: 12s; }
-.particle:nth-child(20) { --size: 4px; --move-x: -15vw; --move-y: -30vh; left: 2%; top: 98%; --duration: 18s; }
-.particle:nth-child(21) { --size: 5px; --move-x: 25vw; --move-y: -20vh; left: 8%; top: 92%; --duration: 13s; }
-.particle:nth-child(22) { --size: 3px; --move-x: -20vw; --move-y: -25vh; left: 14%; top: 86%; --duration: 15s; }
-.particle:nth-child(23) { --size: 4px; --move-x: 15vw; --move-y: -15vh; left: 20%; top: 80%; --duration: 14s; }
-.particle:nth-child(24) { --size: 5px; --move-x: -25vw; --move-y: -30vh; left: 26%; top: 74%; --duration: 16s; }
-.particle:nth-child(25) { --size: 3px; --move-x: 20vw; --move-y: -20vh; left: 32%; top: 68%; --duration: 12s; }
-.particle:nth-child(26) { --size: 4px; --move-x: -15vw; --move-y: -25vh; left: 38%; top: 62%; --duration: 17s; }
-.particle:nth-child(27) { --size: 5px; --move-x: 25vw; --move-y: -15vh; left: 44%; top: 56%; --duration: 13s; }
-.particle:nth-child(28) { --size: 3px; --move-x: -20vw; --move-y: -30vh; left: 50%; top: 50%; --duration: 15s; }
-.particle:nth-child(29) { --size: 4px; --move-x: 15vw; --move-y: -20vh; left: 56%; top: 44%; --duration: 14s; }
-.particle:nth-child(30) { --size: 5px; --move-x: -25vw; --move-y: -25vh; left: 62%; top: 38%; --duration: 16s; }
-
-.particle::before {
-  content: '';
-  position: absolute;
-  width: var(--size);
-  height: var(--size);
-  background-color: inherit;
-  border-radius: inherit;
-}
-        #fparticles-js {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background-color: #111;
-            z-index: -1;
-        }
-
-        .content {
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            text-align: center;
-        }
-
-        .logo {
-            width: 150px;
-            height: 150px;
-            margin-bottom: 20px;
-        }
-
-     
-       
-
-@keyframes title-animation {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-h2{
-    font-size:85px;
-    color:transparent;
-    -webkit-text-stroke: 1px #3BBA9C;
-    background: url(/back.png);
-    -webkit-background-clip: text;
-    background-position: 0 0;
-    animation: back 20s linear infinite;
-
-}
-@keyframes back {
-    100%{
-        background-position: 2000px 0;
-    }
-}
-p{
-    font-size: 30px;
-    color: #707793;
-}
-h2 {
-    animation: title-animation 10s ease-out;
-    animation: back 20s linear infinite;
-}
-
-/*   0------------------------*/
-
-.animated-button {
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  padding: 16px 36px;
-  border: 4px solid;
-  border-color: transparent;
-  font-size: 16px;
- /* background-color: ;*/
-  border-radius: 100px;
-  font-weight: 600;
-  color: #3BBA9C;
-    box-shadow: 0 0 0 2px #2E3047;
-  cursor: pointer;
-  overflow: hidden;
-  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-.animated-button svg {
-  position: absolute;
-  width: 24px;
-  fill: #3BBA9C;
-  z-index: 9;
-  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-.animated-button .arr-1 {
-  right: 16px;
-}
-
-.animated-button .arr-2 {
-  left: -25%;
-}
-
-.animated-button .circle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 20px;
-  height: 20px;
-  background-color: #c5e5e4;
-  border-radius: 50%;
-  opacity: 0;
-  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-.animated-button .text {
-  position: relative;
-  z-index: 1;
-  transform: translateX(-12px);
-  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-.animated-button:hover {
-  box-shadow: 0 0 0 12px transparent;
-  color: #2E3047;
-  border-radius: 12px;
-}
-
-.animated-button:hover .arr-1 {
-  right: -25%;
-}
-
-.animated-button:hover .arr-2 {
-  left: 16px;
-}
-
-.animated-button:hover .text {
-  transform: translateX(12px);
-}
-
-.animated-button:hover svg {
-    fill: #3BBA9C;
-}
-
-.animated-button:active {
-  scale: 0.95;
-  box-shadow: 0 0 0 4px #3BBA9C;
-}
-
-.animated-button:hover .circle {
-  width: 220px;
-  height: 220px;
-  opacity: 1;
-}
-
-/*   0------------------------*/
-
-p {
-  text-shadow: 0 0 7px rgba(255,255,255,.3), 0 0 3px rgba(255,255,255,.3);
-}
-
-.container {
-  color: #e5e5e5;
-  font-size: 2.26rem;
-  text-transform: uppercase;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.animation {
-  height:50px;
-  overflow:hidden;
-  margin-left: 1rem;
-}
-
-.animation > div > div {
-  padding: 0.25rem 0.75rem;
-  height:2.81rem;
-  margin-bottom: 2.81rem;
-  display:inline-block;
-}
-
-.animation div:first-child {
-  animation: text-animation 8s infinite;
-}
-
-.first div {
-  background-color:#2E3047;
-}
-.second div {
-  background-color:#3C3F58;
-}
-.third div {
-  background-color:#43455C;
-}
-fourth div {
-  background-color:#c10528;
-}
-
-@keyframes text-animation {
-  0% {margin-top: 0;}
-  10% {margin-top: 0;}
-  20% {margin-top: -5.62rem;}
-  30% {margin-top: -5.62rem;}
-  40% {margin-top: -11.24rem;}
-  60% {margin-top: -11.24rem;}
-  70% {margin-top: -5.62rem;}
-  80% {margin-top: -5.62rem;}
-  90% {margin-top: 0;}
-  100% {margin-top: 0;}
-}
-/**  STYLE SOCIALS*/
-/*STYLES */
-
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="me-logo.png" type="image/x-icon">
+  <title>Chiyaka Kudakwashe</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="particles-js"></div>
-    <div class="content">
-       <a href="index.html"><img src="me.png" alt="Logo" class="logo"></a> 
-        <div class="text-area">
-            <p>Hi, I'm</p>
-            <h2>Kudakwashe Chyaka</h2>
-            <main class="container">
-                <p>A Skilled 🛠</p>
-                <section class="animation">
-                  <div class="first"><div>Full Stack Developer</div></div>
-                  <div class="second"><div>Desktop App Developer</div></div>
-                  <div class="third"><div>Mobile App Developer</div></div>
-                  <div class="fourth"><div>Web Developer</div></div>
-                  
-                </section>
-              </main>
-        </div>
-        <div class="particle"></div>
-<div class="particle"></div>
-<div class="particle"></div>
-<div class="particle"></div>
-<div class="particle"></div>
-<div class="particle"></div>
-<div class="particle"></div>
-<div class="particle"></div>
-<div class="particle"></div>
-<div class="particle"></div>
-<div class="particle"></div>
-<div class="particle"></div>
-<div class="particle"></div>
-<div class="particle"></div>
-<div class="particle"></div>
-<div class="particle"></div>
-<div class="particle"></div>
-<div class="particle"></div>
-<div class="particle"></div>
-<div class="particle"></div>
-<div class="particle"></div>
-<div class="particle"></div>
-<div class="particle"></div>
-<div class="particle"></div>
-<div class="particle"></div>
-<div class="particle"></div>
-<div class="particle"></div>
-<div class="particle"></div>
-
-        <button class="animated-button">
-            <svg xmlns="http://www.w3.org/2000/svg" class="arr-2" viewBox="0 0 24 24">
-              <path
-                d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
-              ></path>
-            </svg>
-            <span class="text">P O R T I F O L I O</span>
-            <span class="circle"></span>
-            <svg xmlns="http://www.w3.org/2000/svg" class="arr-1" viewBox="0 0 24 24">
-              <path
-                d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
-              ></path>
-            </svg>
-          </button>
-
-         
-         
-
-
-
-    
-        </div>
-       
-       
-    </div>
-
-
-    <script>
-        particlesJS.load('particles-js', 'particles.json', function() {
-            console.log('particles.js loaded');
-        });
-    </script>
-    
- <script src="https://kit.fontawesome.com/9a7550cfee.js" crossorigin="anonymous"></script>
+  <div class="content">
+    <a href="index.html"><img src="me.png" alt="Logo" class="logo"></a> 
+     <div class="text-area">
+         <p>HI, I'M</p>
+         <h2>Kudakwashe Chyaka</h2>
+         <main class="container">
+             <p>A Skilled 🛠</p>
+             <section class="animation">
+               <div class="first"><div>Full Stack Developer</div></div>
+               <div class="second"><div>Desktop App Developer</div></div>
+               <div class="third"><div style="color: #1B1A55;">Mobile App Developer</div></div>
+               <div class="forth"><div>Desktop App Developer</div></div>
+             </section> 
+           </main>
+     </div>
+     <button class="animated-button">
+         <svg xmlns="http://www.w3.org/2000/svg" class="arr-2" viewBox="0 0 24 24">
+           <path
+             d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+           ></path>
+         </svg>
+         <span class="text">P O R T I F O L I O</span>
+         <span class="circle"></span>
+         <svg xmlns="http://www.w3.org/2000/svg" class="arr-1" viewBox="0 0 24 24">
+           <path
+             d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+           ></path>
+         </svg>
+       </button>
+     </div>  
 </body>
 </html>
